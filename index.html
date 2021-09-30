@@ -1,0 +1,288 @@
+<html style="scroll-behavior: smooth;">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<title>4H Computers</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <link href="//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book" rel="stylesheet" type="text/css" /> -->
+</head>
+<style>
+	@import url("860c3ec7bbc5da3e97233ccecafe512e.ttf");
+
+	h1,
+	h2,
+	p,
+	a,
+	td {
+		font-family: Circular Std Book, sans-serif;
+		color: black;
+		letter-spacing: 0.3px;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	h1,
+	h2 {
+		font-weight: 575;
+	}
+
+	@font-face {
+		font-family: "Circular Std Book";
+		src: url("860c3ec7bbc5da3e97233ccecafe512e.eot");
+		/* IE9*/
+		src: url("860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"),
+			/* IE6-IE8 */
+			url("860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"),
+			/* chrome、firefox */
+			url("860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"),
+			/* chrome、firefox */
+			url("860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"),
+			/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+			url("860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg");
+		/* iOS 4.1- */
+	}
+
+	#cover {
+		width: 100%;
+		height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background: url('20190806_201342.jpg');
+		box-shadow: inset 0 0 0 100vh #FFFFFFbb;
+		background-size: cover;
+		background-position: 50%;
+		padding-top: 48px;
+	}
+
+	.section {
+		width: 100%;
+		padding-top: 64px;
+		padding-bottom: 64px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.sectionheader {
+		width: 40%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 48px;
+		padding-left: 15%;
+	}
+
+	.sectioncontent {
+		width: 60%;
+		align-items: center;
+		justify-content: flex-start;
+		padding-right: 15%;
+		padding-left: 16px;
+	}
+
+	#headerbar {
+		height: 48px;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		width: 100%;
+		z-index: 5;
+		box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.39);
+		/* -webkit-box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.74);
+		-moz-box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.74); */
+	}
+
+	@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+		#headerbar {
+			-webkit-backdrop-filter: blur(32px) brightness(120%);
+			backdrop-filter: blur(32px) brightness(120%);
+			background-color: #FFFFFF88;
+		}
+	}
+
+	.headerlink {
+		margin-right: 8px;
+		margin-left: 8px;
+		text-decoration: none;
+	}
+
+	#linkscontainer>a {
+		text-decoration: none;
+		margin-right: 16px;
+		margin-left: 16px;
+		margin-top: 32px;
+	}
+
+	.linkbox {
+		width: 178px;
+		height: 178px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #a5d6a7;
+		/* background-color: #54cf54; */
+		border-radius: 24px;
+		flex-direction: column;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.linkboxtext {
+		margin-bottom: 0;
+		pointer-events: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	}
+
+	.link-button-icons {
+		width: 48px;
+		height: 48px;
+	}
+
+	.material-icons {
+		pointer-events: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	}
+
+	.hoverfancy {
+		transition: all 240ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	.hoverfancy:hover {
+		transform: scale(1.14);
+	}
+
+	.hoverfancy:active {
+		transform: scale(1.06);
+	}
+
+	#linkscontainer {
+		flex-direction: row;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (max-width: 632px) {
+		.hoverfancy:hover {
+			transform: none;
+		}
+
+		.hoverfancy:active {
+			transform: scale(0.94);
+		}
+
+		#linkscontainer {
+			flex-direction: column;
+		}
+
+		#cover {
+			height: 40%;
+		}
+
+		#coverdescription {
+			display: none;
+		}
+
+		.section {
+			width: 100%;
+			padding-top: 64px;
+			padding-bottom: 64px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.sectionheader {
+			width: auto;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.sectioncontent {
+			width: auto;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+	}
+</style>
+
+<body style="margin: 0;">
+	<div id="headerbar">
+		<a href="#cover" class="headerlink">Home</a>
+		<a href="#about" class="headerlink">About</a>
+		<a href="#contact" class="headerlink">Contact</a>
+		<a href="#links" class="headerlink">Links</a>
+	</div>
+	<div id="cover">
+		<h1>Ridge Chinese Culture Club</h1>
+		<h2 id="coverdescription" style="color: black;">A Ridge High School Club</h2>
+	</div>
+	<div id="about" class="section" style="background-color: white;">
+		<div class="sectionheader">
+			<h1>About</h1>
+		</div>
+		<div class="sectioncontent">
+			<h1>This is the Chinese Culture Club</h1>
+			<p>We do stuff, Lawrence please fill in </p>
+		</div>
+	</div>
+	<div id="contact" class="section" style="background-color: #ffd7d7;">
+		<div class="sectionheader">
+			<h1>Come & Join</h1>
+		</div>
+		<div class="sectioncontent">
+			<h2>Where we Meet</h2>
+			<p>We meet in room 701 first half of lunch</p>
+		</div>
+	</div>
+	<div id="contact" class="section" style="background-color: white;">
+		<div class="sectionheader">
+			<h1>Leaders</h1>
+		</div>
+		<div class="sectioncontent">
+			<h2>Lawrence Han</h2>
+			<p>asked cy to make a website</p>
+		</div>
+	</div>
+	<div id="links" class="section" style="background-color: #d7ffd9;">
+		<div style="display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%;">
+			<h1 style="margin: 0;">Links</h1>
+			<div id="linkscontainer">
+				<a href="https://discord.com/">
+					<div class="linkbox hoverfancy">
+						<svg aria-hidden="true" focusable="false" data-icon="discord" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" class="link-button-icons">
+							<path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" />
+						</svg>
+						<h2 class="linkboxtext">Discord</h2>
+					</div>
+				</a>
+				<a href="https://classroom.google.com">
+					<div class="linkbox hoverfancy">
+						<svg class="link-button-icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="32" height="32"
+viewBox="0 0 32 32"
+style=" fill:#000000;"><path d="M 7 5 C 5.355469 5 4 6.355469 4 8 L 4 24 C 4 25.644531 5.355469 27 7 27 L 25 27 C 26.644531 27 28 25.644531 28 24 L 28 8 C 28 6.355469 26.644531 5 25 5 Z M 7 7 L 25 7 C 25.566406 7 26 7.433594 26 8 L 26 24 C 26 24.566406 25.566406 25 25 25 L 23 25 L 23 23 L 18 23 L 18 25 L 7 25 C 6.433594 25 6 24.566406 6 24 L 6 8 C 6 7.433594 6.433594 7 7 7 Z M 16 11 C 14.894531 11 14 11.894531 14 13 C 14 14.105469 14.894531 15 16 15 C 17.105469 15 18 14.105469 18 13 C 18 11.894531 17.105469 11 16 11 Z M 11.5 13 C 10.671875 13 10 13.671875 10 14.5 C 10 15.328125 10.671875 16 11.5 16 C 12.328125 16 13 15.328125 13 14.5 C 13 13.671875 12.328125 13 11.5 13 Z M 20.5 13 C 19.671875 13 19 13.671875 19 14.5 C 19 15.328125 19.671875 16 20.5 16 C 21.328125 16 22 15.328125 22 14.5 C 22 13.671875 21.328125 13 20.5 13 Z M 16 16 C 14.453125 16 13.394531 16.660156 12.75 17.21875 C 12.414063 17.09375 12.039063 17 11.59375 17 C 9.902344 17 9 18 9 18 L 9 20 L 23 20 L 23 18 C 23 18 22.082031 17 20.59375 17 C 20.082031 17 19.644531 17.089844 19.28125 17.21875 C 18.636719 16.65625 17.558594 16 16 16 Z"></path></svg>
+						<h2 class="linkboxtext">Classroom</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="section"
+		style="background-color: white; justify-content: center; align-items: center; padding-top: 0; padding-bottom: 0; flex-direction: column;">
+		<p style="text-align: center; margin-right: 16px; margin-left: 16px; hyphens: none;">Website built by <a
+				href="https://cy2.me/">Cy Westbrook</a><br>CCC is a part of Ridge High School, Basking Ridge</p>
+	</div>
+</body>
+
+</html>
